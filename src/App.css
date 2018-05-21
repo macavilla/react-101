@@ -1,65 +1,154 @@
+/* *********************** */
+
+/*    Estilos generales    */
+
+/* *********************** */
+
 @font-face {
   font-family: "Amiko";
   src: url(./assets/fonts/Amiko/Amiko-Regular.ttf);
   font-weight: normal;
 }
+
 @font-face {
   font-family: "AmikoBold";
   src: url(./assets/fonts/Amiko/Amiko-Bold.ttf);
   font-weight: bold;
 }
+
 @font-face {
   font-family: "Lato";
   src: url(./assets/fonts/Lato/Lato-Regular.ttf);
   font-weight: normal;
 }
+
 @font-face {
   font-family: "LatoBold";
   src: url(./assets/fonts/Lato/Lato-Bold.ttf);
   font-weight: bold;
 }
 
-.menu-wrapper{
-  height: 3vw;
-  width: 30vw;
-}
-
-.wrapper{
-  background-image: linear-gradient(222deg,#ff272d 0,#c42482 33%,#ab217f 47%,#671878 84%,#4a1475 100%);
+.wrapper {
+  background-image: linear-gradient(222deg, #ff272d 0, #c42482 33%, #ab217f 47%, #671878 84%, #4a1475 100%);
   height: 100vh;
 }
-.home{
+
+h1,
+h2,
+h3 {
+  font-family: "AmikoBold";
+}
+
+h4,
+h5,
+h6 {
+  font-family: "Amiko";
+}
+
+p {
+  font-family: "Lato";
+}
+
+.home,
+.about {
+  width: 100vw;
   color: white;
   display: grid;
-  grid-template-rows: 5vw repeat(3, 1fr);
-  grid-template-columns: 10vw repeat(2, 1fr);
-  grid-template-areas: 
-  ". img . "
-  ". img h1 "
-  ". img p";
-}
-.home img{
-  grid-area: img;
-  align-self: center;
-  justify-self: center;
-  width: 20vw;
-  border-radius: 50%;
-  border: 0.5vw solid rgba(134, 128, 128, 0.363) ;
-  filter: drop-shadow(0.3vw 0.1vw 0.7vw rgb(56, 56, 56));
-}
-.home h1{
-  grid-area: h1;
-  align-self: flex-end
-}
-.home p{
-  grid-area: p;
-  align-self: center
 }
 
 /* *********************** */
-/*                         */
+
+/*          Menu           */
+
+/* *********************** */
+.menu{
+  width: 100vw;
+  height: 4vw;
+  background: rgba(255, 255, 255, 0.2);
+  border-bottom: 0.2vw solid rgba(156, 156, 156, 0.2);
+  filter: drop-shadow(0.5vw 0.1vw 1vw rgb(56, 56, 56));
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.menu .button a{
+  text-decoration: none;
+  font-family: "Amiko";
+  font-size: 1.5vw;
+  text-align: center;
+  color: white;
+
+}
+
+
+/* *********************** */
+
+/*          Home           */
+
+/* *********************** */
+
+.home {
+  grid-template-rows: 10vw repeat(2, 1fr);
+  grid-template-columns: 10vw 1fr 20vw;
+  grid-template-areas: 
+  ". . ." 
+  ". h1 ." 
+  ". p .";
+}
+
+.home h1 {
+  grid-area: h1;
+  justify-self: center;
+}
+
+.home p {
+  grid-area: p;
+  justify-self: center;
+}
+
+/* *********************** */
+
+/*          About          */
+
+/* *********************** */
+.about {
+  grid-template-rows: 10vw repeat(3, 1fr);
+  grid-template-columns: 10vw repeat(2, 1fr) 20vw;
+  grid-template-areas: 
+  ". . . ." 
+  ". img h2 ." 
+  ". img p ." 
+  ". . . .";
+}
+
+.about img {
+  grid-area: img;
+  align-self: center;
+  justify-self: flex-end;
+  margin-right: 2vw;
+  width: 20vw;
+  border-radius: 50%;
+  border: 0.5vw solid rgba(134, 128, 128, 0.363);
+  filter: drop-shadow(0.2vw 0.1vw 0.4vw rgb(56, 56, 56));
+}
+
+.about h2 {
+  grid-area: h2;
+  align-self: flex-end;
+  font-family: "AmikoBold";
+}
+
+.about p {
+  grid-area: p;
+  align-self: flex-start;
+  font-family: "Lato";
+}
+
+/* *********************** */
+
 /* Create-react-app styles */
-/*                         */
+
 /* *********************** */
 
 .App {
@@ -87,6 +176,10 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
