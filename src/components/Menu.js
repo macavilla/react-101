@@ -12,7 +12,6 @@ class Menu extends Component {
                     <div className="menu">
                         <div className="button">
                             <Link to="/">HOME</Link>
-                            <br />
                         </div>
                         <div className="button">
                             <Link to="/about">ABOUT</Link>

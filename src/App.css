@@ -89,12 +89,12 @@ p {
 /* *********************** */
 
 .home {
-  grid-template-rows: 10vw repeat(2, 1fr);
+  grid-template-rows: 10vw repeat(3, 1fr);
   grid-template-columns: 10vw 1fr 20vw;
   grid-template-areas: 
-  ". . ." 
-  ". h1 ." 
-  ". p .";
+  ". . . ." 
+  ". h1 h1 ." 
+  ". p p .";
 }
 
 .home h1 {
@@ -104,7 +104,7 @@ p {
 
 .home p {
   grid-area: p;
-  justify-self: center;
+  justify-self: flex-end;
 }
 
 /* *********************** */
