@@ -3,6 +3,7 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Home from '../routes/home';
 import About from '../routes/about';
+import Contact from '../routes/contact';
 
 class Menu extends Component {
     render() {
@@ -17,9 +18,13 @@ class Menu extends Component {
                         <div className="button">
                             <Link to="/about">ABOUT</Link>
                         </div>
+                        <div className="button">
+                            <Link to="/contact">CONTACT</Link>
+                        </div>
                     </div>
                     <Route exact path="/" component={Home} />
                     <Route path="/about" component={About} />
+                    <Route path="/contact" component={Contact} />
                 </Fragment>
             </Router>
         );
